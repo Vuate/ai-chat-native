@@ -1,15 +1,11 @@
-import '../global.css';
-import { Stack } from 'expo-router';
-import 'react-native-reanimated';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
+import "../global.css";
+import { Stack } from "expo-router";
 
 export default function RootLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+    <Stack screenOptions={{ headerShown: false }} initialRouteName="auth/login">
+      <Stack.Screen name="auth/login" />
+      <Stack.Screen name="(tabs)" />
     </Stack>
   );
 }
